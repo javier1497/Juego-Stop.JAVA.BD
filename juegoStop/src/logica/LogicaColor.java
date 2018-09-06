@@ -16,7 +16,7 @@ import persistencia.Persistencia;
  */
 public class LogicaColor {
      public boolean VerificarColor(String Palabra){
-        String Verificar = "select  * from fruta where fruta.fruta like '"+Palabra+"'";
+        String Verificar = "select  * from color where color.color like '"+Palabra+"'";
         System.out.print(""+Verificar);
         ResultSet resultado = null;
         if(Persistencia.conectar()){

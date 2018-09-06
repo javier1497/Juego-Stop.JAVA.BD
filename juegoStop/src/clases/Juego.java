@@ -15,7 +15,7 @@ public class Juego {
     private String Letra;
     private int CodigoNombre;
     private int CodigoApellido;
-    private int codigoPais;
+    private int CodigoPais;
     private int CodigoColor;
     private int CodigoFruta;
     private int CodigoAnimal;
@@ -100,14 +100,14 @@ public class Juego {
      * @return the codigoPais
      */
     public int getCodigoPais() {
-        return codigoPais;
+        return CodigoPais;
     }
 
     /**
      * @param codigoPais the codigoPais to set
      */
     public void setCodigoPais(int codigoPais) {
-        this.codigoPais = codigoPais;
+        this.CodigoPais = codigoPais;
     }
 
     /**

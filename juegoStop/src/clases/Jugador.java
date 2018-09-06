@@ -9,6 +9,6 @@ package clases;
  *
  * @author Estudiante
  */
-public class Players {
+public class Jugador {
     
 }

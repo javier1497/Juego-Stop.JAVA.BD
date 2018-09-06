@@ -10,5 +10,7 @@ package logica;
  * @author Estudiante
  */
 public class LogicaPlayer {
-    
+    public String consultarJugador(){
+        return "ruben";
+    }
 }

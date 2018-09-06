@@ -10,5 +10,8 @@ package logica;
  * @author Estudiante
  */
 public class LogicaJugador {
+    public String registrar(){
+        return "los negros son malos";
+    }
     
 }

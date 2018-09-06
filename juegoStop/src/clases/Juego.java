@@ -11,7 +11,7 @@ package clases;
  */
 public class Juego {
     private String nombre;
-    private int puntaje;
+    private int puntaje; 
     
     
 }

@@ -11,4 +11,8 @@ package logica;
  */
 public class LogicaJugador {
     
+    public String consultar(){
+        return "ruben";
+    }
+    
 }

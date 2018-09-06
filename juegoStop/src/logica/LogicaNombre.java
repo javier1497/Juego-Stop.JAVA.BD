@@ -5,7 +5,8 @@
  */
 package logica;
 
-import clases.Pais;
+
+import clases.Nombre;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -16,9 +17,9 @@ import persistencia.Persistencia;
  *
  * @author Estudiante
  */
-public class LogicaPais {
-     public boolean VerificarPais(String Palabra){
-        String Verificar = "select  * from fruta where fruta.fruta like '"+Palabra+"'";
+public class LogicaNombre {
+      public boolean VerificarPais(String Palabra){
+        String Verificar = "select  * from nombre where nombre.nombre like '"+Palabra+"'";
         System.out.print(""+Verificar);
         ResultSet resultado = null;
         if(Persistencia.conectar()){
@@ -46,4 +47,5 @@ public class LogicaPais {
     }
     
 }
+
 

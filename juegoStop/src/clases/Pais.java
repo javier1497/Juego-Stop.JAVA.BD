@@ -11,4 +11,40 @@ package clases;
  */
 public class Pais {
     
+    private int codPais;
+    private String Pais;
+    
+    
+    public Pais(){
+        
+    }
+
+    /**
+     * @return the codPais
+     */
+    public int getCodPais() {
+        return codPais;
+    }
+
+    /**
+     * @param codPais the codPais to set
+     */
+    public void setCodPais(int codPais) {
+        this.codPais = codPais;
+    }
+
+    /**
+     * @return the Pais
+     */
+    public String getPais() {
+        return Pais;
+    }
+
+    /**
+     * @param Pais the Pais to set
+     */
+    public void setPais(String Pais) {
+        this.Pais = Pais;
+    }
+    
 }

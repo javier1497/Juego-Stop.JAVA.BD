@@ -11,4 +11,42 @@ package clases;
  */
 public class Apellido {
     
+    private int codApellido;
+    private String Apellido;
+    
+    
+    public Apellido() {
+    
+        
+        
+    }
+
+    /**
+     * @return the codApellido
+     */
+    public int getCodApellido() {
+        return codApellido;
+    }
+
+    /**
+     * @param codApellido the codApellido to set
+     */
+    public void setCodApellido(int codApellido) {
+        this.codApellido = codApellido;
+    }
+
+    /**
+     * @return the Apellido
+     */
+    public String getApellido() {
+        return Apellido;
+    }
+
+    /**
+     * @param Apellido the Apellido to set
+     */
+    public void setApellido(String Apellido) {
+        this.Apellido = Apellido;
+    }
+    
 }

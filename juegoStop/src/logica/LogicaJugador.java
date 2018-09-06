@@ -14,4 +14,8 @@ public class LogicaJugador {
         return "los negros son malos";
     }
     
+    public String consultar(){
+        return "ruben";
+    }
+    
 }

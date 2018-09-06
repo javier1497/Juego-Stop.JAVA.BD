@@ -9,6 +9,6 @@ package logica;
  *
  * @author Estudiante
  */
-public class logicaPlayer {
+public class LogicaJuego {
     
 }

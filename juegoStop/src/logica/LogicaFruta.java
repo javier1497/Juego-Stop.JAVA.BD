@@ -19,7 +19,7 @@ import persistencia.Persistencia;
  */
 public class LogicaFruta {
      public boolean VerificarFruta (String Palabra){
-        String Verificar = "select  * from animal where animal.animal like '"+Palabra+"'";
+        String Verificar = "select  * from fruta where fruta.fruta like '"+Palabra+"'";
         System.out.print(""+Verificar);
         ResultSet resultado = null;
         if(Persistencia.conectar()){

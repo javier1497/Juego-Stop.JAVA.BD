@@ -95,7 +95,7 @@ public class Stop extends javax.swing.JFrame {
         jButtonIniciarJuego.setBackground(new java.awt.Color(102, 255, 255));
         jButtonIniciarJuego.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaz/imagenes/Play1Normal_26969.png"))); // NOI18N
         jButtonIniciarJuego.setToolTipText("INICIAR JUEGO");
-        jButtonIniciarJuego.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        jButtonIniciarJuego.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -161,7 +161,7 @@ public class Stop extends javax.swing.JFrame {
         jButtonReiniciarJuego.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaz/imagenes/system_software_update_22485.png"))); // NOI18N
         jButtonReiniciarJuego.setToolTipText("REINICIAR JUEGO");
         jButtonReiniciarJuego.setBorderPainted(false);
-        jButtonReiniciarJuego.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        jButtonReiniciarJuego.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonReiniciarJuego.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonReiniciarJuegoActionPerformed(evt);
@@ -181,13 +181,14 @@ public class Stop extends javax.swing.JFrame {
                         .addGap(22, 22, 22)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonReiniciarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(87, 87, 87))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel5)))))
+                .addGap(137, 137, 137))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -277,7 +278,7 @@ public class Stop extends javax.swing.JFrame {
         jButtonGane.setBackground(new java.awt.Color(255, 0, 0));
         jButtonGane.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaz/imagenes/372raisedhand2_100287.png"))); // NOI18N
         jButtonGane.setToolTipText("GANE");
-        jButtonGane.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        jButtonGane.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);

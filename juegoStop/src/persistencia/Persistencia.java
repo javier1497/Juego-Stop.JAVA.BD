@@ -26,7 +26,7 @@ public class Persistencia {
             //esto captura errores tiene la capacidad de comprobar en tiempo real cualquier termino que agregemos.
             //y se puede tomar una decision apenas tome el error.
                 Class.forName("com.mysql.jdbc.Driver").newInstance(); //Esta primera linea lo que hace es llamar al driver para podeme conectar.
-                con=DriverManager.getConnection("jdbc:mysql://localhost/taller3", "root", "root");  //Esto es para conectarnos a la base de datos que queremos entrar.
+                con=DriverManager.getConnection("jdbc:mysql://localhost/stop_juego", "root", "root");  //Esto es para conectarnos a la base de datos que queremos entrar.
                 //demoadsi = nombre de la base de datos  /// root = el ususario  // dilove = contraseña.
                 areadb = con.createStatement();
                 System.out.println("Conectado");

@@ -5,11 +5,21 @@
  */
 package interfaz;
 
+import com.sun.corba.se.impl.orbutil.CorbaResourceUtil;
+import java.util.List;
+
 /**
  *
  * @author Estudiante
  */
 public class Stop extends javax.swing.JFrame {
+        LogicaNombre verificarNombre = new LogicaNombre();
+        LogicaAnimal verficAranimal = new LogicaAnimal();
+        LogicaApellido verificarApellido = new LogicaApellido();
+        LogicaColor verificarColor = new LogicaColor();
+        LogicaFruta verficarFruta = new LogicaFruta();
+        LogicaPais verificarPais = new LogicaPais();
+    
 
     /**
      * Creates new form Stop
@@ -58,7 +68,7 @@ public class Stop extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        Letra = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -96,6 +106,11 @@ public class Stop extends javax.swing.JFrame {
         jButtonIniciarJuego.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaz/imagenes/Play1Normal_26969.png"))); // NOI18N
         jButtonIniciarJuego.setToolTipText("INICIAR JUEGO");
         jButtonIniciarJuego.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonIniciarJuego.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIniciarJuegoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -227,6 +242,17 @@ public class Stop extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jTextFieldName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldNameFocusLost(evt);
+            }
+        });
+        jTextFieldName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNameActionPerformed(evt);
+            }
+        });
+
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 255));
         jLabel8.setText("Nombre");
@@ -259,9 +285,9 @@ public class Stop extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(0, 0, 255));
         jLabel15.setText("La Letra es:");
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 255));
-        jLabel16.setText("A");
+        Letra.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        Letra.setForeground(new java.awt.Color(0, 0, 255));
+        Letra.setText("A");
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 0, 0));
@@ -289,7 +315,7 @@ public class Stop extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addComponent(jLabel16))
+                        .addComponent(Letra))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -363,7 +389,7 @@ public class Stop extends javax.swing.JFrame {
                                 .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel16))
+                            .addComponent(Letra))
                         .addGap(25, 25, 25))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -407,6 +433,23 @@ public class Stop extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonReiniciarJuegoActionPerformed
 
+    private void jTextFieldNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldNameActionPerformed
+
+    private void jTextFieldNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldNameFocusLost
+//Cuando pierda el foco empezara hacer la validacion de que el nombre empiece con la letra seleccionada y de que si exista en al base de datos.
+        
+        LogicaNombre misnombres = new LogicaNombre ();
+        
+        
+    }//GEN-LAST:event_jTextFieldNameFocusLost
+
+    private void jButtonIniciarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIniciarJuegoActionPerformed
+        //mandar letra seleccionada para que busque en la base de datos.
+        ;
+    }//GEN-LAST:event_jButtonIniciarJuegoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -443,6 +486,7 @@ public class Stop extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Letra;
     private javax.swing.JButton jButtonAgregar;
     private javax.swing.JButton jButtonGane;
     private javax.swing.JButton jButtonIniciarJuego;
@@ -454,7 +498,6 @@ public class Stop extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;

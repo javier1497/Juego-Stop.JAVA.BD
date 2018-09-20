@@ -20,6 +20,10 @@ public class Apellido {
         
         
     }
+    public Apellido(int codApellido, String Apellido){
+        this.codApellido = codApellido;
+        this.Apellido = Apellido;
+}
 
     /**
      * @return the codApellido

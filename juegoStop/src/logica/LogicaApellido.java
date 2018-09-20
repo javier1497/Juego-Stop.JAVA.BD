@@ -17,7 +17,7 @@ import persistencia.Persistencia;
  */
 public class LogicaApellido {
       public boolean VerificarApellido(String Palabra){
-        String Verificar = "select  * from apellido where apellido.apellido like '"+Palabra+"'";
+        String Verificar = "select  * from apellidos where apellidos.apellido like '"+Palabra+"%'";
         System.out.print(""+Verificar);
         ResultSet resultado = null;
         if(Persistencia.conectar()){

@@ -18,7 +18,7 @@ import persistencia.Persistencia;
  */
 public class LogicaPais {
      public boolean VerificarPais(String Palabra){
-        String Verificar = "select  * from fruta where fruta.fruta like '"+Palabra+"'";
+        String Verificar = "select  * from pais where pais.pais like '"+Palabra+"%'";
         System.out.print(""+Verificar);
         ResultSet resultado = null;
         if(Persistencia.conectar()){

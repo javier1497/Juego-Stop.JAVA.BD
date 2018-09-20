@@ -14,11 +14,9 @@ import persistencia.Persistencia;
 
 
 
-
-
 public class LogicaAnimal {
-    public boolean VerificarAnimal(String Letra){
-        String Verificar = "select  * from animal where animal.animal like '"+Letra%+"'";
+    public boolean VerificarAnimal(String Palabra){
+        String Verificar = "select  * from animal where animal.animal like '"+Palabra+"%'";
         System.out.print(""+Verificar);
         ResultSet resultado = null;
         if(Persistencia.conectar()){

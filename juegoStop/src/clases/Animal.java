@@ -17,6 +17,11 @@ public class Animal {
     
     
     }
+    
+    public Animal(int codAnimal, String Animal){
+        this.codAnimal = codAnimal;
+        this.Animal = Animal;
+    }
 
     /**
      * @return the codAnimal
@@ -45,4 +50,6 @@ public class Animal {
     public void setAnimal(String Animal) {
         this.Animal = Animal;
     }
+    
 }
+    

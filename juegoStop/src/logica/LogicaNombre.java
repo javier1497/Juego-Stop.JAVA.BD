@@ -18,8 +18,8 @@ import persistencia.Persistencia;
  * @author Estudiante
  */
 public class LogicaNombre {
-      public boolean VerificarPais(String Palabra){
-        String Verificar = "select  * from nombre where nombre.nombre like '"+Palabra+"'";
+      public boolean VerificarNombre(String Palabra){
+        String Verificar = "select  * from nombres where nombres.nombre like '"+Palabra+"%'";
         System.out.print(""+Verificar);
         ResultSet resultado = null;
         if(Persistencia.conectar()){

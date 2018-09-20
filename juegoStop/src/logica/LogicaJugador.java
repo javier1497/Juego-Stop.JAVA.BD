@@ -5,13 +5,19 @@
  */
 package logica;
 
+import clases.Jugador;
+
+
 /**
  *
  * @author Estudiante
  */
 public class LogicaJugador {
-    public String registrar(){
-        return "los negros son malos";
+    public String registrar(Jugador nuevoJugador){
+        
+        //AQUI VAMOS  A INSERTAR UN NUEVO JUGADOR
+        String nuevoJ = "insert into jugador values(null, ' "+nuevoJugador.getNombre()+"')";
+         return "los negros son malos";
     }
     
     public String consultar(){

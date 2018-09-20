@@ -54,7 +54,7 @@ public class Stop extends javax.swing.JFrame {
             }
             if (s == 60) {
                 s = 0;
-                ++m;
+                ++m;    
             }
             if (m == 60) {
                 m = 0;
@@ -63,12 +63,16 @@ public class Stop extends javax.swing.JFrame {
 
             if (m == 1) {
                 inicioJuego = false;
-                //JOptionPane.showMessageDialog(btnStop, "EL TIEMPO SE ACABO");
+                JOptionPane.showMessageDialog(btninicio, "EL TIEMPO SE ACABO");
                 t.stop();
                 m = 0;
                 cs = 0;
                 s = 0;
+                btninicio.setEnabled(true);            
 
+            }
+            if(s == 45){
+                txtTiempo.setForeground(Color.red);
             }
 
         }
@@ -123,6 +127,7 @@ public class Stop extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         t = new Timer(10, acciones);
+      
     }
 
     @SuppressWarnings("unchecked")
@@ -136,7 +141,7 @@ public class Stop extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         JlabelLetra = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        btninicio = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -156,7 +161,6 @@ public class Stop extends javax.swing.JFrame {
         jLabel1.setText("juego stop");
 
         txtTiempo.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        txtTiempo.setForeground(new java.awt.Color(255, 0, 51));
         txtTiempo.setText("00");
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -171,11 +175,11 @@ public class Stop extends javax.swing.JFrame {
         JlabelLetra.setForeground(new java.awt.Color(0, 0, 255));
         JlabelLetra.setText("A");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaz/imagenes/Play1Normal_26969.png"))); // NOI18N
-        jLabel2.setToolTipText("INICIAR JUEGO");
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        btninicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/interfaz/imagenes/Play1Normal_26969.png"))); // NOI18N
+        btninicio.setToolTipText("INICIAR JUEGO");
+        btninicio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                btninicioMouseClicked(evt);
             }
         });
 
@@ -186,12 +190,9 @@ public class Stop extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap(441, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel4))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,7 +200,7 @@ public class Stop extends javax.swing.JFrame {
                         .addComponent(jLabel15)
                         .addGap(155, 155, 155)
                         .addComponent(jLabel21)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 247, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addComponent(JlabelLetra)
@@ -208,7 +209,7 @@ public class Stop extends javax.swing.JFrame {
                         .addGap(154, 154, 154))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(btninicio)
                 .addGap(453, 453, 453))
         );
         jPanel2Layout.setVerticalGroup(
@@ -226,7 +227,7 @@ public class Stop extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(23, 23, 23)
-                .addComponent(jLabel2)
+                .addComponent(btninicio)
                 .addContainerGap())
         );
 
@@ -310,14 +311,16 @@ public class Stop extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+    private void btninicioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btninicioMouseClicked
         // TODO add your handling code here:
         generarletra();
         JlabelLetra.setText((letra + "").toUpperCase());
         inicioJuego = true;
         /* ACA ES DONDE INICCIAL EL TIMEPO DE JUEGO*/
         t.start();
-    }//GEN-LAST:event_jLabel2MouseClicked
+        btninicio.setEnabled(false);
+        txtTiempo.setForeground(Color.black);
+    }//GEN-LAST:event_btninicioMouseClicked
 
     /**
      * @param args the command line arguments
@@ -356,9 +359,9 @@ public class Stop extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel JlabelLetra;
+    private javax.swing.JLabel btninicio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

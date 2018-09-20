@@ -13,10 +13,14 @@ public class Jugador {
     
     private int codJugador;
     private String nombre;
-    private int puntaje;
     
     public Jugador(){
         
+    }
+    
+    public Jugador(int codJugador, String nombre){
+        this.codJugador = codJugador;
+        this.nombre = nombre;
     }
 
     /**
@@ -46,19 +50,8 @@ public class Jugador {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
+    
 
-    /**
-     * @return the puntaje
-     */
-    public int getPuntaje() {
-        return puntaje;
-    }
-
-    /**
-     * @param puntaje the puntaje to set
-     */
-    public void setPuntaje(int puntaje) {
-        this.puntaje = puntaje;
-    }
     
 }

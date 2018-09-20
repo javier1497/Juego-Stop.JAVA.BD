@@ -17,7 +17,7 @@ public class LogicaJugador {
         
         //AQUI VAMOS  A INSERTAR UN NUEVO JUGADOR
         String nuevoJ = "insert into jugador values(null, ' "+nuevoJugador.getNombre()+"')";
-         return "los negros son malos";
+         return "USUARIO REGISTRADO";
     }
     
     public String consultar(){
